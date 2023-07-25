@@ -97,7 +97,7 @@ let fet = fetch("https://restcountries.com/v3.1/all")
      }
     function weatherupdate (a,b){
 
-      fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${a}&lon=${b}&appid=75e5070a460ff9cce78da8499c2a3eee`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=75e5070a460ff9cce78da8499c2a3eee`)
          .then((response) => response.json())
         .then((data)=> {
           console.log(data);
