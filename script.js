@@ -1,5 +1,5 @@
 let fet = fetch("https://restcountries.com/v3.1/all")
-  .then((response) =>{ if(response.status===200){ response.json()} })
+  .then((response) =>{ if(response.status==200){ response.json()} })
   .then((data=[]) => { console.log(data);
     data.map((value)=>{
         console.log(` ${value.name.common} ${value.flags.png} Capital ${value.capital} Region ${value.region}
@@ -98,7 +98,7 @@ let fet = fetch("https://restcountries.com/v3.1/all")
     function weatherupdate (a,b){
 
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=75e5070a460ff9cce78da8499c2a3eee`)
-         .then((response) =>{ if(response.status===200){  response.json()} })
+         .then((response) =>{ if(response.status==200){  response.json()} })
         .then((data)=> {
           console.log(data);
           const output=document.getElementById('p1')
