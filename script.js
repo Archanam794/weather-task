@@ -1,5 +1,5 @@
 let fet = fetch("https://restcountries.com/v3.1/all")
-  .then((response) =>{ if(response.status==200){ response.json()} })
+  .then((response) =>{  response.json()})
   .then((data=[]) => { console.log(data);
     data.map((value)=>{
         console.log(` ${value.name.common} ${value.flags.png} Capital ${value.capital} Region ${value.region}
