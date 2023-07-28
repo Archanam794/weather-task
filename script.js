@@ -1,6 +1,6 @@
 let fet = fetch("https://restcountries.com/v3.1/all")
-  .then((response) =>{  response.json()})
-  .then((data=[]) => { console.log(data);
+  .then((response) => response.json())
+  .then((data=[]) => {
     data.map((value)=>{
         console.log(` ${value.name.common} ${value.flags.png} Capital ${value.capital} Region ${value.region}
          CountryCode ${value.car.signs} latlng ${value.latlng}`   )
@@ -98,7 +98,7 @@ let fet = fetch("https://restcountries.com/v3.1/all")
     function weatherupdate (a,b){
 
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=75e5070a460ff9cce78da8499c2a3eee`)
-         .then((response) =>{ if(response.status==200){  response.json()} })
+         .then((response) => response.json())
         .then((data)=> {
           console.log(data);
           const output=document.getElementById('p1')
@@ -114,18 +114,18 @@ let fet = fetch("https://restcountries.com/v3.1/all")
      
 
 
-//  function block(lat,lng,name){
+//   function weatherupdate (a,b){
  
 
    
  
 //    console.log(name)
-//  fetch('https://api.openweathermap.org/data/3.0/onecall?lat='${lat}'&lon='${lon}'&exclude={part}&appid='${75e5070a460ff9cce78da8499c2a3eee}'')
+//   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&appid=75e5070a460ff9cce78da8499c2a3eee`)
 //   .then((response) => response.json())
 //  .then((data)=> {
 
 //       alert(`
-//                 For ${name.id}  
+//                
 //       Current Humidity is ${data.main.humidity}
 //       Current Pressure is ${data.main.pressure}
 //      Current Temperature is ${data.main.temp}`)
